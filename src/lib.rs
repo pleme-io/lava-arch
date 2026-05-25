@@ -85,8 +85,10 @@ impl Builder {
         Architecture {
             name: self.name,
             resources: self.resources,
+            data_sources: Vec::new(),
             outputs: self.outputs,
             providers: self.providers,
+            locals: indexmap::IndexMap::new(),
         }
     }
 }
