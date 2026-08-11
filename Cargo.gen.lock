@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "cargo_lock_sha256": "7b26a6c8f709bf3e3e6bebcd75b414d9ada82b2edead57fcc35fc3d5ca41a3c4",
+  "cargo_lock_sha256": "d9b99bda37354f23909239de17237739c00124ff56ef64e28929ead0912f913e",
   "manifest_sha256": {
-    "Cargo.toml": "5ce0c4e07e85c50d3bd108b3c750fd1ea3ade069462b98373a53a2abc2959c77"
+    "Cargo.toml": "3f6ea998362eb5e804bd0b12d069d881024a9fd363f65ee9b19fd8e60a88953e"
   },
   "target_resolves": {
     "base": {
@@ -61,7 +61,7 @@
         "build_dependencies": [],
         "features": []
       },
-      "lava-arch-0.1.6": {
+      "lava-arch-0.1.7": {
         "runtime_dependencies": [
           {
             "name": "indexmap",
@@ -109,7 +109,7 @@
           },
           {
             "name": "thiserror",
-            "package_key": "thiserror-2.0.19",
+            "package_key": "thiserror-2.0.20",
             "kind": "normal",
             "features": [],
             "uses_default_features": true,
@@ -171,7 +171,7 @@
           },
           {
             "name": "thiserror",
-            "package_key": "thiserror-2.0.19",
+            "package_key": "thiserror-2.0.20",
             "kind": "normal",
             "features": [],
             "uses_default_features": true,
@@ -483,11 +483,11 @@
           "proc-macro"
         ]
       },
-      "thiserror-2.0.19": {
+      "thiserror-2.0.20": {
         "runtime_dependencies": [
           {
             "name": "thiserror_impl",
-            "package_key": "thiserror-impl-2.0.19",
+            "package_key": "thiserror-impl-2.0.20",
             "kind": "normal",
             "features": [],
             "uses_default_features": true,
@@ -502,7 +502,7 @@
           "std"
         ]
       },
-      "thiserror-impl-2.0.19": {
+      "thiserror-impl-2.0.20": {
         "runtime_dependencies": [
           {
             "name": "proc_macro2",
@@ -588,7 +588,7 @@
     "itoa-1.0.18": {
       "edition": "2021"
     },
-    "lava-arch-0.1.6": {
+    "lava-arch-0.1.7": {
       "edition": "2024",
       "lib_target": {
         "name": "lava_arch",
@@ -634,11 +634,11 @@
     "syn-3.0.3": {
       "edition": "2021"
     },
-    "thiserror-2.0.19": {
+    "thiserror-2.0.20": {
       "edition": "2021",
       "build_script": "build.rs"
     },
-    "thiserror-impl-2.0.19": {
+    "thiserror-impl-2.0.20": {
       "edition": "2021",
       "proc_macro": true
     },
