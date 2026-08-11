@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "cargo_lock_sha256": "5ff178adc62feb90dcd7f1bca7b8bfb8a2ecbe6a29303d090a044febc050eafe",
+  "cargo_lock_sha256": "3ae98370691df5d8cc6a0769bc77449d1f4d1c7fa5c59c7e2736a04107b95d7b",
   "manifest_sha256": {
-    "Cargo.toml": "4fb9d67fb95f22f360b61b9a802ef056d4d512f4105cdd31aff4c00f6ea82749"
+    "Cargo.toml": "5ce0c4e07e85c50d3bd108b3c750fd1ea3ade069462b98373a53a2abc2959c77"
   },
   "target_resolves": {
     "base": {
@@ -77,7 +77,7 @@
           },
           {
             "name": "lava_core",
-            "package_key": "lava-core-0.1.7",
+            "package_key": "lava-core-0.2.0-388d38581ba5d8e6e886cde3ffd605b0a9b1e3f1",
             "kind": "normal",
             "features": [],
             "uses_default_features": true,
@@ -121,7 +121,7 @@
         "build_dependencies": [],
         "features": []
       },
-      "lava-core-0.1.7": {
+      "lava-core-0.2.0-388d38581ba5d8e6e886cde3ffd605b0a9b1e3f1": {
         "runtime_dependencies": [
           {
             "name": "indexmap",
@@ -151,7 +151,9 @@
             "name": "serde_json",
             "package_key": "serde_json-1.0.151",
             "kind": "normal",
-            "features": [],
+            "features": [
+              "preserve_order"
+            ],
             "uses_default_features": true,
             "optional": false,
             "target": null,
@@ -324,6 +326,16 @@
       "serde_json-1.0.151": {
         "runtime_dependencies": [
           {
+            "name": "indexmap",
+            "package_key": "indexmap-2.14.0",
+            "kind": "normal",
+            "features": [],
+            "uses_default_features": true,
+            "optional": true,
+            "target": null,
+            "tree": "target"
+          },
+          {
             "name": "itoa",
             "package_key": "itoa-1.0.18",
             "kind": "normal",
@@ -367,6 +379,8 @@
         "build_dependencies": [],
         "features": [
           "default",
+          "indexmap",
+          "preserve_order",
           "std"
         ]
       },
@@ -581,8 +595,12 @@
         "path": "src/lib.rs"
       }
     },
-    "lava-core-0.1.7": {
-      "edition": "2024"
+    "lava-core-0.2.0-388d38581ba5d8e6e886cde3ffd605b0a9b1e3f1": {
+      "edition": "2024",
+      "lib_target": {
+        "name": "lava_core",
+        "path": "src/lib.rs"
+      }
     },
     "memchr-2.8.3": {
       "edition": "2021"
@@ -649,6 +667,8 @@
       "build_script": "build.rs"
     }
   },
-  "git_nar_sha256": {},
+  "git_nar_sha256": {
+    "lava-core-0.2.0-388d38581ba5d8e6e886cde3ffd605b0a9b1e3f1": "sha256-7Tc6G16tjQ/w0k/3L9Z1ZK4D+IxXWXNHAoCCoYond34="
+  },
   "flake_metadata": {}
 }
