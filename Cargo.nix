@@ -181,7 +181,7 @@ rec {
       };
       "lava-arch" = rec {
         crateName = "lava-arch";
-        version = "0.1.7";
+        version = "0.2.1";
         edition = "2024";
         src = lib.cleanSourceWith { filter = sourceFilter;  src = ./.; };
         libName = "lava_arch";
@@ -540,9 +540,9 @@ rec {
       };
       "thiserror" = rec {
         crateName = "thiserror";
-        version = "2.0.19";
+        version = "2.0.20";
         edition = "2021";
-        sha256 = "1ngwxsjsa64v1n7vb90h2b0i3fqk1piwaf0z6fqdacqfhjc3b909";
+        sha256 = "0kxs6p295jffxhzaxpxv1dwaaf5iqlm6sx8h0djp6ancbxgj71pc";
         authors = [
           "David Tolnay <dtolnay@gmail.com>"
         ];
@@ -559,9 +559,9 @@ rec {
       };
       "thiserror-impl" = rec {
         crateName = "thiserror-impl";
-        version = "2.0.19";
+        version = "2.0.20";
         edition = "2021";
-        sha256 = "1ka10pqy1g8zy5al9m8yadg30jp8hx0q80j8awmd8131yw6gxjs3";
+        sha256 = "1bwjc94gi0xn5jz26h1a8bjj1wdkvvr6jifamyc4mp9n28zcs15w";
         procMacro = true;
         libName = "thiserror_impl";
         authors = [

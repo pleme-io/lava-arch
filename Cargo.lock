@@ -34,7 +34,7 @@ checksum = "8f42a60cbdf9a97f5d2305f08a87dc4e09308d1276d28c869c684d7777685682"
 
 [[package]]
 name = "lava-arch"
-version = "0.2.0"
+version = "0.2.1"
 dependencies = [
  "indexmap",
  "lava-core",
@@ -46,6 +46,8 @@ dependencies = [
 [[package]]
 name = "lava-core"
 version = "0.2.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a0de00c35740e1edec30f29ecfb61729f28c58ecf1bc52ede99b14139a566362"
 dependencies = [
  "indexmap",
  "serde",
