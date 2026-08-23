@@ -181,7 +181,7 @@ rec {
       };
       "lava-arch" = rec {
         crateName = "lava-arch";
-        version = "0.2.1";
+        version = "0.2.2";
         edition = "2024";
         src = lib.cleanSourceWith { filter = sourceFilter;  src = ./.; };
         libName = "lava_arch";
