@@ -47,6 +47,11 @@ pub struct Builder {
     resources: Vec<Resource>,
     outputs: IndexMap<String, Value>,
     providers: Vec<ProviderRef>,
+    /// Adopt-not-create declarations. Kept beside resources rather than
+    /// derived from them: whether an object already exists is a fact about
+    /// the live world, not about the architecture, so only the caller can
+    /// know it.
+    imports: Vec<lava_core::Import>,
 }
 
 impl Builder {
@@ -65,6 +70,17 @@ impl Builder {
         let rref = r.out("id");
         self.resources.push(r);
         rref
+    }
+
+    /// Declare a terraform `import` block — adopt the existing object `id`
+    /// into the address `to`.
+    ///
+    /// Without this an architecture describing a LIVE estate plans to create
+    /// what is already there; for a catalogue of ~1000 repositories that is a
+    /// thousand `422 name already exists` failures behind a plan that looked
+    /// entirely reasonable.
+    pub fn add_import(&mut self, to: impl Into<String>, id: impl Into<String>) {
+        self.imports.push(lava_core::Import { to: to.into(), id: id.into() });
     }
 
     /// Declare a typed output. Downstream architectures consume via
@@ -89,6 +105,7 @@ impl Builder {
             outputs: self.outputs,
             providers: self.providers,
             locals: indexmap::IndexMap::new(),
+            imports: self.imports,
         }
     }
 }
