@@ -46,7 +46,7 @@ dependencies = [
 [[package]]
 name = "lava-core"
 version = "0.2.3"
-source = "git+https://github.com/pleme-io/lava-core?rev=f7530d06a52c3356d81415c6611c5ccd2c8cbd06#f7530d06a52c3356d81415c6611c5ccd2c8cbd06"
+source = "git+https://github.com/pleme-io/lava-core?rev=d541a050819f99288b1cd797c56f277014195a74#d541a050819f99288b1cd797c56f277014195a74"
 dependencies = [
  "indexmap",
  "serde",

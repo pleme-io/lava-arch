@@ -35,4 +35,4 @@ thiserror = "2"
 # COST, stated: crates.io refuses a package with a git dependency, so this
 # crate cannot be published while the line stands. Revert to a version
 # requirement when lava-core ships.
-lava-core = { git = "https://github.com/pleme-io/lava-core", rev = "f7530d06a52c3356d81415c6611c5ccd2c8cbd06" }
+lava-core = { git = "https://github.com/pleme-io/lava-core", rev = "d541a050819f99288b1cd797c56f277014195a74" }

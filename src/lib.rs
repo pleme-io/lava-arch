@@ -52,6 +52,7 @@ pub struct Builder {
     /// the live world, not about the architecture, so only the caller can
     /// know it.
     imports: Vec<lava_core::Import>,
+    moved: Vec<lava_core::Moved>,
 }
 
 impl Builder {
@@ -83,6 +84,12 @@ impl Builder {
         self.imports.push(lava_core::Import { to: to.into(), id: id.into() });
     }
 
+    /// Declare a terraform `moved` block: the state at `from` now belongs
+    /// to `to`.
+    pub fn add_moved(&mut self, from: impl Into<String>, to: impl Into<String>) {
+        self.moved.push(lava_core::Moved { from: from.into(), to: to.into() });
+    }
+
     /// Declare a typed output. Downstream architectures consume via
     /// `(architecture-output upstream :vpc-id)`.
     pub fn output(&mut self, key: impl Into<String>, value: Value) {
@@ -106,6 +113,7 @@ impl Builder {
             providers: self.providers,
             locals: indexmap::IndexMap::new(),
             imports: self.imports,
+            moved: self.moved,
         }
     }
 }
