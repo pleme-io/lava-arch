@@ -181,7 +181,7 @@ rec {
       };
       "lava-arch" = rec {
         crateName = "lava-arch";
-        version = "0.2.3";
+        version = "0.2.4";
         edition = "2024";
         src = lib.cleanSourceWith { filter = sourceFilter;  src = ./.; };
         libName = "lava_arch";
@@ -221,8 +221,8 @@ rec {
         workspace_member = null;
         src = pkgs.fetchgit {
           url = "https://github.com/pleme-io/lava-core";
-          rev = "f7530d06a52c3356d81415c6611c5ccd2c8cbd06";
-          sha256 = "1cpda3a9f6m2xccamr0yf9k27xmhfrba6a43z0w8cc23nswh6r1i";
+          rev = "d541a050819f99288b1cd797c56f277014195a74";
+          sha256 = "11s4cjjx6w0lzi9acb25891z6qwzq0aip53p7mn3rff8112ddskw";
         };
         libName = "lava_core";
         authors = [
@@ -512,9 +512,9 @@ rec {
       };
       "syn" = rec {
         crateName = "syn";
-        version = "3.0.3";
+        version = "3.0.4";
         edition = "2021";
-        sha256 = "18srnql3cd39j9q6hf1az02p67rlr1rf6njx9zx4vxj9i3jvmsak";
+        sha256 = "17v4ac61x0hvj1879ywqzlwhyzg7n9lr9zniwrsif3b1ykfmq9z6";
         authors = [
           "David Tolnay <dtolnay@gmail.com>"
         ];
