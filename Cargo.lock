@@ -51,8 +51,9 @@ dependencies = [
 
 [[package]]
 name = "lava-core"
-version = "0.2.3"
-source = "git+https://github.com/pleme-io/lava-core?rev=d541a050819f99288b1cd797c56f277014195a74#d541a050819f99288b1cd797c56f277014195a74"
+version = "0.2.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2ed8e4a4d3548572a37b1d3d13c0ca1833d4e96a51825ee823d3fbc71ab523f4"
 dependencies = [
  "indexmap",
  "serde",
